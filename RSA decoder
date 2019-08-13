@@ -1,0 +1,30 @@
+def egcd(a, b) :
+	x,y, u,v = 0,1, 1,0
+	while a != 0:
+		q, r = b//a, b%a
+		m, n = x-u*q, y-v*q
+		b,a, x,y, u,v = a,r, u,v, m,n
+		gcd = b
+	return gcd, x, y
+
+def main():
+
+	p = #www.factordb.com first number kapag finactor "x"
+	q = #www.factordb.com secod number kapag finactor "x"
+	e = #yung nasa kaliwa "y" ( x, y )
+	ct = #yung  idedecode mo
+	
+	#compute n
+	n = p* q
+	
+	phi = (p-1) * (q-1)
+
+	gcd, a, b, = egcd(e, phi)
+	d = a
+	
+	print( "n: " + str(d) );
+
+	pt = pow(ct, d, n)
+	print( "pt: " + str(pt) )
+if _name_ == "_main_":
+	main()	
